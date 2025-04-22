@@ -1,0 +1,116 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHL Assessment Recommender</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-inline-size: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .input-section {
+            margin-block-end: 20px;
+        }
+        textarea {
+            inline-size: 100%;
+            min-block-size: 100px;
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        #results {
+            margin-block-start: 20px;
+        }
+        table {
+            inline-size: 100%;
+            border-collapse: collapse;
+            margin-block-start: 20px;
+        }
+        th, td {
+            padding: 12px;
+            text-align: start;
+            border-block-end: 1px solid #ddd;
+        }
+        th {
+            background-color: #f8f9fa;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>SHL Assessment Recommender</h1>
+        <div class="input-section">
+            <label for="query">Enter job description or requirements:</label>
+            <textarea id="query" placeholder="Example: I am hiring for Java developers who can collaborate effectively with business teams..."></textarea>
+            <button onclick="getRecommendations()">Get Recommendations</button>
+        </div>
+        <div id="results"></div>
+    </div>
+
+    <script>
+        async function getRecommendations() {
+            const query = document.getElementById('query').value;
+            const resultsDiv = document.getElementById('results');
+            
+            try {
+                const response = await fetch('/api/recommend', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ query })
+                });
+                
+                const data = await response.json();
+                
+                let html = `<table>
+                    <tr>
+                        <th>Assessment Name</th>
+                        <th>Remote Testing</th>
+                        <th>Adaptive/IRT Support</th>
+                        <th>Duration</th>
+                        <th>Test Type</th>
+                    </tr>`;
+                
+                data.recommendations.forEach(rec => {
+                    html += `<tr>
+                        <td><a href="${rec.url}" target="_blank">${rec.name}</a></td>
+                        <td>${rec.remote_testing}</td>
+                        <td>${rec.adaptive_support}</td>
+                        <td>${rec.duration}</td>
+                        <td>${rec.test_type}</td>
+                    </tr>`;
+                });
+                
+                html += '</table>';
+                resultsDiv.innerHTML = html;
+            } catch (error) {
+                resultsDiv.innerHTML = '<p style="color: red;">Error getting recommendations. Please try again.</p>';
+            }
+        }
+    </script>
+</body>
+</html>
