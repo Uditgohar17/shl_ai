@@ -1,0 +1,21 @@
+name,url,description,duration,test_type,remote,irt
+Cognitive Ability Test,https://www.shl.com/en/assessments/cognitive-ability-test,Measures problem-solving and logical reasoning skills.,30 minutes,Cognitive,Yes,Yes
+Personality Questionnaire,https://www.shl.com/en/assessments/personality-questionnaire,Assesses personality traits and workplace behavior.,25 minutes,Behavioral,Yes,Yes
+Numerical Reasoning Test,https://www.shl.com/en/assessments/numerical-reasoning-test,"Tests ability to work with numbers, tables, and graphs.",20 minutes,Cognitive,Yes,No
+Verbal Reasoning Test,https://www.shl.com/en/assessments/verbal-reasoning-test,Measures ability to understand and evaluate written information.,19 minutes,Cognitive,Yes,No
+Situational Judgement Test,https://www.shl.com/en/assessments/situational-judgement-test,Assesses judgment and decision-making in workplace scenarios.,30 minutes,Behavioral,Yes,Yes
+Inductive Reasoning Test,https://www.shl.com/en/assessments/inductive-reasoning-test,Evaluates pattern recognition and logical sequencing.,20 minutes,Cognitive,Yes,No
+English Language Proficiency Test,https://www.shl.com/en/assessments/english-language-test,"Assesses English grammar, vocabulary, and comprehension.",40 minutes,Language,Yes,No
+Emotional Intelligence Test,https://www.shl.com/en/assessments/emotional-intelligence-test,"Evaluates emotional awareness, control, and empathy.",35 minutes,Behavioral,Yes,Yes
+Critical Thinking Test,https://www.shl.com/en/assessments/critical-thinking-test,Measures analytical and critical reasoning skills.,45 minutes,Cognitive,Yes,Yes
+Work Style Questionnaire,https://www.shl.com/en/assessments/work-style-questionnaire,Identifies candidate preferences and cultural fit.,30 minutes,Behavioral,Yes,No
+Cognitive Ability Test,https://www.shl.com/en/assessments/cognitive-ability-test,Measures problem-solving and logical reasoning skills.,30 minutes,Cognitive,Yes,Yes
+Personality Questionnaire,https://www.shl.com/en/assessments/personality-questionnaire,Assesses personality traits and workplace behavior.,25 minutes,Behavioral,Yes,Yes
+Numerical Reasoning Test,https://www.shl.com/en/assessments/numerical-reasoning-test,"Tests ability to work with numbers, tables, and graphs.",20 minutes,Cognitive,Yes,No
+Verbal Reasoning Test,https://www.shl.com/en/assessments/verbal-reasoning-test,Measures ability to understand and evaluate written information.,19 minutes,Cognitive,Yes,No
+Situational Judgement Test,https://www.shl.com/en/assessments/situational-judgement-test,Assesses judgment and decision-making in workplace scenarios.,30 minutes,Behavioral,Yes,Yes
+Inductive Reasoning Test,https://www.shl.com/en/assessments/inductive-reasoning-test,Evaluates pattern recognition and logical sequencing.,20 minutes,Cognitive,Yes,No
+English Language Proficiency Test,https://www.shl.com/en/assessments/english-language-test,"Assesses English grammar, vocabulary, and comprehension.",40 minutes,Language,Yes,No
+Emotional Intelligence Test,https://www.shl.com/en/assessments/emotional-intelligence-test,"Evaluates emotional awareness, control, and empathy.",35 minutes,Behavioral,Yes,Yes
+Critical Thinking Test,https://www.shl.com/en/assessments/critical-thinking-test,Measures analytical and critical reasoning skills.,45 minutes,Cognitive,Yes,Yes
+Work Style Questionnaire,https://www.shl.com/en/assessments/work-style-questionnaire,Identifies candidate preferences and cultural fit.,30 minutes,Behavioral,Yes,No
